@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "60891928127",
+    "firebase_url": "https://speak-ba056.firebaseio.com",
+    "project_id": "speak-ba056",
+    "storage_bucket": "speak-ba056.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60891928127:android:51acf5d0c609ddd1",
+        "android_client_info": {
+          "package_name": "com.example.minions.spek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60891928127-v3u127vgpcimp3hh923nnn6juv8vmagd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.minions.spek",
+            "certificate_hash": "08e2ed28151d2b975c4884fc2a397b90d22d51f9"
+          }
+        },
+        {
+          "client_id": "60891928127-jsmgvv40igv49lvm1inbdgsod6gqgu9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa5_LLVekR7odjrOBht3XNZHlZlOrS2IU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60891928127-jsmgvv40igv49lvm1inbdgsod6gqgu9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

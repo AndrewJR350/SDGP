@@ -1,0 +1,156 @@
+ 
+
+------------------------------------ LOGIN --------------------------------------------------------------------------
+
+ private Button signupButton;
+    private EditText usernameTxt;
+    private EditText nameTxt;
+    private EditText passwordTxt;
+    private EditText telPhnNoTxt;
+    private EditText addressTxt;
+
+    private String username;
+    private String name;
+    private String password;
+    private String address;
+    private int telNumber;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signup);
+        addressTxt = (EditText) findViewById(R.id.txtAddress);
+        signupButton = (Button) findViewById(R.id.btnSigup);
+        usernameTxt = (EditText) findViewById(R.id.txtUserName);
+        nameTxt = (EditText) findViewById(R.id.txtName);
+        passwordTxt = (EditText) findViewById(R.id.txtPassword);
+        telPhnNoTxt = (EditText) findViewById(R.id.txtPhnNo);
+
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                username = usernameTxt.getText().toString().trim();
+                name = nameTxt.getText().toString().trim();
+                password = passwordTxt.getText().toString().trim();
+                address = addressTxt.getText().toString().trim();
+                telNumber = Integer.valueOf(telPhnNoTxt.getText().toString().trim());
+
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+                boolean hasUppercase = !password.equals(password.toLowerCase());
+                if (username.equals("") || name.equals("") || password.equals("") || address.equals("") || telPhnNoTxt.getText().equals("")) {
+                    Toast.makeText(context, "Form is not Valid", duration).show();
+                } else {
+                    if (username.length() <= 20) {
+                        if (!hasUppercase) {
+                            Toast.makeText(context, "Must have an uppercase Character", duration).show();
+                        } else {
+						
+						 }
+                    } else {
+                        Toast.makeText(context, "Username not contain more than 20 Characters", duration).show();
+                    }
+                }
+
+
+            }
+        });
+
+    }
+}
+
+------------------------------------- Splash Screen --------------------------------------------------------------------
+
+public class StartActivity extends AppCompatActivity {
+    private final String TAG = "DeviceListActivity";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start);
+        Thread thread = new Thread("thread01");
+        thread.start();
+
+
+
+        Log.i(TAG, "Check 01");
+        try {
+            thread.sleep(3000);
+            Intent intent = new Intent(StartActivity.this, SelectionActivity.class);
+            startActivity(intent);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+
+
+----------------------------------------------  SIGNUP  -----------------------------------------------------------------------------------
+
+public class SignupActivity extends AppCompatActivity {
+    private final String TAG = "DeviceListActivity";
+    private Button signupButton;
+    private EditText usernameTxt;
+    private EditText nameTxt;
+    private EditText passwordTxt;
+    private EditText telPhnNoTxt;
+    private EditText addressTxt;
+
+    private String username;
+    private String name;
+    private String password;
+    private String address;
+    private int telNumber;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signup);
+        addressTxt = (EditText) findViewById(R.id.txtAddress);
+        signupButton = (Button) findViewById(R.id.btnSigup);
+        usernameTxt = (EditText) findViewById(R.id.txtUserName);
+        nameTxt = (EditText) findViewById(R.id.txtName);
+        passwordTxt = (EditText) findViewById(R.id.txtPassword);
+        telPhnNoTxt = (EditText) findViewById(R.id.txtPhnNo);
+
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                username = usernameTxt.getText().toString().trim();
+                name = nameTxt.getText().toString().trim();
+                password = passwordTxt.getText().toString().trim();
+                address = addressTxt.getText().toString().trim();
+                telNumber = Integer.valueOf(telPhnNoTxt.getText().toString().trim());
+
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+                boolean hasUppercase = !password.equals(password.toLowerCase());
+                if (username.equals("") || name.equals("") || password.equals("") || address.equals("") || telPhnNoTxt.getText().equals("")) {
+                    Toast.makeText(context, "Form is not Valid", duration).show();
+                } else {
+                    if (username.length() <= 20) {
+                        if (!hasUppercase) {
+                            Toast.makeText(context, "Must have an uppercase Character", duration).show();
+                        } else {
+                            
+                        }
+                    } else {
+                        Toast.makeText(context, "Username not contain more than 20 Characters", duration).show();
+                    }
+                }
+
+
+            }
+        });
+
+    }
+}
+
+
+
+
+
+
+
+
